@@ -42,7 +42,9 @@ merge_ave_y = merge_ave(:,1);
 %%
 %グラフ化
 scatter(uss_ave_x,uss_ave_y,'y','o','filled')
-
+hold on
+scatter(LRF_ave_x,LRF_ave_y,'b','o','filled')
+scatter(merge_ave_x,merge_ave_y,'g','o','filled')
 %軸設定
 %軸範囲
 axis([-1.5 1.5 0 1.5])
@@ -54,9 +56,11 @@ ax.XMinorTick = 'on';
 ax.YMinorTick = 'on';
 ax.XGrid = 'on';
 ax.YGrid = 'on';
-title('11410会議室前')
+ax.XAxis.FontSize = 15;
+ax.YAxis.FontSize = 15;
 
-hold on
-scatter(LRF_ave_x,LRF_ave_y,'b','o','filled')
-scatter(merge_ave_x,merge_ave_y,'g','o','filled')
+title('会議室前','FontSize',20);
+
+lgd = legend;
+lgd.FontSize = 20;
 legend('超音波センサ','LRF','merge')
