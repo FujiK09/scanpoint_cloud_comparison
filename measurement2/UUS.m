@@ -24,8 +24,8 @@ USSxy10= rosReadCartesian(msgStructs{10});
 %Plot
 %rosPlot(時間,"XY座標範囲",大きさ)
 
-for i=1:10
-    figure
-    rosPlot(msgStructs{i},'MaximumRange',1.5);
-end
+% for i=1:10
+%     figure
+%     rosPlot(msgStructs{i},'MaximumRange',1.5);
+% end
 
